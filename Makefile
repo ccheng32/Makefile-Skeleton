@@ -9,12 +9,12 @@ INC_DIR=include/
 OBJ_DIR=.obj/
 
 # some on-off flags
-DEBUG=n
-OPENMP=y
+DEBUG=y
+OPENMP=n
 
 # libs and includes
 INCLUDE=-I$(LOCAL)include/ -I$(INC_DIR)
-LIB=-L$(LOCAL)lib/
+LIB=-L$(LOCAL)lib/ -lgomp
 
 # specify the objects required for building
 OBJ_IDT=$(OBJ_DIR)/.idt
